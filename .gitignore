@@ -4,6 +4,7 @@
 *.eqn
 *.hex
 *.html
+*.jdi
 *.mif
 *.pin
 *.pof
@@ -16,6 +17,7 @@
 *.sof
 *.summary
 *.tcl
+
 
 
 db/

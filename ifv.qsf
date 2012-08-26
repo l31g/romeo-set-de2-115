@@ -38,13 +38,10 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY ifmd
+set_global_assignment -name TOP_LEVEL_ENTITY ifmunitd
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:40:56  AUGUST 25, 2012"
 set_global_assignment -name LAST_QUARTUS_VERSION "12.0 SP2"
-set_global_assignment -name VHDL_FILE sqr2.vhd
-set_global_assignment -name VHDL_FILE mult2.vhd
-set_global_assignment -name VHDL_FILE ifmd.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
@@ -1099,6 +1096,10 @@ set_location_assignment PIN_V24 -to HSMC_CLKOUT_N2
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N2
 set_location_assignment PIN_G24 -to HSMC_CLKOUT_N1
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N1
+set_global_assignment -name VHDL_FILE ifmunitd.vhd
+set_global_assignment -name VHDL_FILE sqr2.vhd
+set_global_assignment -name VHDL_FILE mult2.vhd
+set_global_assignment -name VHDL_FILE ifmd.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

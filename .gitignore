@@ -1,6 +1,39 @@
-*.class
+*.bak
+*.cmp
+*.done
+*.eqn
+*.hex
+*.html
+*.mif
+*.pin
+*.pof
+*.ptdf
+*.qar
+*.qdf
+*.rpt
+*.sdc
+*.smsg
+*.sof
+*.summary
+*.tcl
 
-# Package Files #
-*.jar
-*.war
-*.ear
+
+db/
+greybox_tmp/
+incremental_db/
+simulation/
+timing/
+testbench/
+
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db

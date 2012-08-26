@@ -171,8 +171,8 @@ architecture datapath of ifv is
 CLK5025: entity work.pll5025 port map(
 	inclk0	=> CLOCK_50,
 	c0		=> clk_50,
-	c1		=> clk_25,
-	c2		=> clk_sdram
+	c1		=> clk_25
+--	c2		=> clk_sdram
 	);
 
 IFM: entity work.hook port map(
@@ -192,37 +192,37 @@ IFM: entity work.hook port map(
 	we			=> we
 	);
 
-NIOS: entity work.nios port map (
- -- 1) global signals:
-	clk								=> clk_50,
-	clk_25							=> clk_25,
-	reset_n							=> '1',
-
-	PS2_CLK_to_and_from_the_ps2_0	=> PS2_CLK,
-	PS2_DAT_to_and_from_the_ps2_0	=> PS2_DAT,
-	irq_from_the_ps2_0				=> LEDG(8),
-
- -- the_ram
-	addressout_to_the_ram			=> std_logic_vector(ram_address),
-	read_to_the_ram					=> ram_read,
-	std_logic_vector(readdata_from_the_ram)		=> ram_data,
-	std_logic_vector(readaddr_from_the_ram)		=> ram_addr,
-	
- -- the sram signal
-	read_addr_to_the_ram_signal		=> '0',
-	read_data_from_the_ram_signal 	=> sig,
-
- -- the_sdram
-	zs_addr_from_the_sdram		=> DRAM_ADDR,
-	zs_ba_from_the_sdram		=> DRAM_BA,
-	zs_cas_n_from_the_sdram		=> DRAM_CAS_N,
-	zs_cke_from_the_sdram		=> DRAM_CKE,
-	zs_cs_n_from_the_sdram		=> DRAM_CS_N,
-	zs_dq_to_and_from_the_sdram	=> DRAM_DQ,
-	zs_dqm_from_the_sdram		=> DRAM_DQM,
-	zs_ras_n_from_the_sdram		=> DRAM_RAS_N,
-	zs_we_n_from_the_sdram		=> DRAM_WE_N
- );
+--NIOS: entity work.nios port map (
+-- -- 1) global signals:
+--	clk								=> clk_50,
+--	clk_25							=> clk_25,
+--	reset_n							=> '1',
+--
+--	PS2_CLK_to_and_from_the_ps2_0	=> PS2_CLK,
+--	PS2_DAT_to_and_from_the_ps2_0	=> PS2_DAT,
+--	irq_from_the_ps2_0				=> LEDG(8),
+--
+-- -- the_ram
+--	addressout_to_the_ram			=> std_logic_vector(ram_address),
+--	read_to_the_ram					=> ram_read,
+--	std_logic_vector(readdata_from_the_ram)		=> ram_data,
+--	std_logic_vector(readaddr_from_the_ram)		=> ram_addr,
+--	
+-- -- the sram signal
+--	read_addr_to_the_ram_signal		=> '0',
+--	read_data_from_the_ram_signal 	=> sig,
+--
+-- -- the_sdram
+--	zs_addr_from_the_sdram		=> DRAM_ADDR,
+--	zs_ba_from_the_sdram		=> DRAM_BA,
+--	zs_cas_n_from_the_sdram		=> DRAM_CAS_N,
+--	zs_cke_from_the_sdram		=> DRAM_CKE,
+--	zs_cs_n_from_the_sdram		=> DRAM_CS_N,
+--	zs_dq_to_and_from_the_sdram	=> DRAM_DQ,
+--	zs_dqm_from_the_sdram		=> DRAM_DQM,
+--	zs_ras_n_from_the_sdram		=> DRAM_RAS_N,
+--	zs_we_n_from_the_sdram		=> DRAM_WE_N
+-- );
 
 RMR: entity work.rammer port map(
 	clk				=> clk_25,

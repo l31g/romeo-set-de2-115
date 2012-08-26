@@ -1,0 +1,5 @@
+PLL_Name	pll5025:CLK5025|altpll:altpll_component|pll5025_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

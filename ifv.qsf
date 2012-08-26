@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY hook
+set_global_assignment -name TOP_LEVEL_ENTITY diff_counter
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:40:56  AUGUST 25, 2012"
 set_global_assignment -name LAST_QUARTUS_VERSION "12.0 SP2"
@@ -1096,6 +1096,8 @@ set_location_assignment PIN_V24 -to HSMC_CLKOUT_N2
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N2
 set_location_assignment PIN_G24 -to HSMC_CLKOUT_N1
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N1
+set_global_assignment -name VHDL_FILE diff_counter.vhd
+set_global_assignment -name VHDL_FILE window_gen.vhd
 set_global_assignment -name VHDL_FILE hook.vhd
 set_global_assignment -name VHDL_FILE ifmunitd.vhd
 set_global_assignment -name VHDL_FILE sqr2.vhd

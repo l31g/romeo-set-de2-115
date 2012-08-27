@@ -47,6 +47,8 @@ entity ifv is
 	PS2_DAT,                    -- Data
 	PS2_CLK : inout std_logic;     -- Clock
 
+	SW			: in std_logic_vector(17 downto 0);
+	
 	-- VGA output
 	VGA_CLK,                                            -- Clock
 	VGA_HS,                                             -- H_SYNC
@@ -110,6 +112,7 @@ architecture datapath of ifv is
 	signal sig				: std_logic_vector(7 downto 0);
 	begin
 
+	sig					<= SW(7 downto 0);
 	reset					<= sig(0);
 	iterate					<= sig(1);
 	color					<= sig(4 downto 2);
